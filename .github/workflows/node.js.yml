@@ -49,6 +49,16 @@ jobs:
       - name: Run Playwright tests
         run: npm run test:e2e
 
+      - name: Ensure badges branch exists
+        run: |
+          git fetch origin
+          if ! git rev-parse --verify badges; then
+            git checkout --orphan badges
+            git reset --hard
+            git commit --allow-empty -m "Initialize badges branch"
+            git push origin badges
+          fi
+
       - name: ⚙️ Generating coverage badges
         uses: jpb06/coverage-badges-action@latest
         with:
@@ -57,6 +67,4 @@ jobs:
 
       - name: Push badges branch
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
           git push origin badges
