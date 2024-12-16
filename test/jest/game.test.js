@@ -11,7 +11,7 @@ describe('Game Class', () => {
 
     beforeEach(() => {
         game = new Game();
-        game.reset(); // Initialiser un mot
+        game.reset();
     });
 
     test('should be 5 tries at the beginning of the game', () => {

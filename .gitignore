@@ -136,3 +136,6 @@ dist
 
 # Ignore all file inside /public/shared-images
 /public/shared-images/*
+/test-results
+/playwright-report
+/playwright-report/*

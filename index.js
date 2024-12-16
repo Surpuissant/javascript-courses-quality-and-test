@@ -7,7 +7,6 @@ const wordBank = require('./wordBank');
 const PORT = process.env.PORT || 3030;
 
 const app = express();
-const scores = [];
 
 // Middleware
 app.use(express.json());

@@ -8,7 +8,7 @@ class WordBank {
     }
 
     async loadWords(filePath = 'words_fr.txt') {
-        if (this.loaded) return; // Éviter de recharger si déjà chargé
+        if (this.loaded) return;
 
         return new Promise((resolve, reject) => {
             fs.createReadStream(filePath)

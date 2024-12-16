@@ -76,6 +76,7 @@ function resetForNewDay() {
     score = INITIAL_SCORE;
 }
 
+let scoreInterval = null;
 function startScoreDecrement() {
     scoreInterval = setInterval(() => {
         if (score > 0) {

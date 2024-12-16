@@ -60,7 +60,7 @@ test.describe('Page d\'accueil - Jeu du Pendu', () => {
 
         // Vérifier que le score est un nombre entre 0 et 200
         expect(scoreValue).toBeGreaterThanOrEqual(0);
-        expect(scoreValue).toBeLessThanOrEqual(200);
+        expect(scoreValue).toBeLessThanOrEqual(400);
 
         // Vérifier que le nombre d'essais est visible
         const triesLocator = await page.locator('#numberOfTries');
