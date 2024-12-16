@@ -72,4 +72,4 @@ jobs:
 
       - name: Push badges branch
         run: |
-          git push origin badges
+          git push origin badges --force
