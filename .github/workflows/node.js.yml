@@ -27,6 +27,21 @@ jobs:
       - name: Install Playwright dependencies
         run: npx playwright install --with-deps
 
+      # Démarrer le backend
+      - name: Start backend
+        run: |
+          nohup npm start & # Démarre le backend en arrière-plan
+          sleep 10          # Attendre que le serveur soit prêt
+        env:
+          NODE_ENV: test    # Si tu as besoin d'une configuration spécifique pour les tests
+
+      # Vérifier que le backend est en ligne
+      - name: Wait for backend
+        run: |
+          for i in {1..10}; do
+            curl --fail http://localhost:3030 || sleep 3
+          done
+
       - name: Run Jest tests
         run: npm run test:unit
 

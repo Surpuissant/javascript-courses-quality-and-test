@@ -4,7 +4,7 @@ module.exports = defineConfig({
     testDir: './test/playwright', // Dossier contenant les tests
     timeout: 30000,
     use: {
-        baseURL: 'http://localhost:3030', // URL de base pour les tests
+        baseURL: process.env.BASE_URL || 'http://localhost:3030', // URL dynamique basée sur l'environnement
         headless: true, // Exécution en mode headless
         browserName: 'chromium',
     },
