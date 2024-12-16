@@ -33,7 +33,7 @@ jobs:
       # Démarrer le backend
       - name: Start backend
         run: |
-          nohup npm dev & # Démarre le backend en arrière-plan
+          nohup npm run dev & # Démarre le backend en arrière-plan
           sleep 5          # Attendre que le serveur soit prêt
         env:
           NODE_ENV: test    # Si tu as besoin d'une configuration spécifique pour les tests
