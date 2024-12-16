@@ -60,3 +60,9 @@ jobs:
       - name: Display Playwright test summary
         if: always()
         run: echo "Playwright test summary generated"
+
+      - name: ⚙️ Generating coverage badges
+        uses: jpb06/coverage-badges-action@latest
+        with:
+          branches: master,preprod,staging
+          badges-icon: jest
