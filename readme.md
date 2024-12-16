@@ -1,5 +1,6 @@
-# Hangman Game
+![Contributors](https://github.com/Surpuissant/javascript-courses-quality-and-test/actions/workflows/node.js.yml/badge.svg)
 
+# Hangman Game
 This is a small project to build a classic Hangman game in JavaScript.
 The primary goal of this project is to practice and learn how to write tests using various tools and frameworks, including Jest.
 
