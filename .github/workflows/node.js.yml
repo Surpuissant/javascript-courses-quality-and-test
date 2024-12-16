@@ -54,15 +54,21 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
 
-      - name: Ensure badges branch exists
+      - name: Ensure badges branch exists and is up-to-date
         run: |
-          git fetch origin
-          if ! git rev-parse --verify badges; then
+          git fetch origin badges || echo "No remote badges branch found"
+          if git rev-parse --verify origin/badges; then
+            git checkout badges || git checkout -b badges origin/badges
+          else
             git checkout --orphan badges
             git reset --hard
             git commit --allow-empty -m "Initialize badges branch"
             git push origin badges
           fi
+
+      - name: Pull latest changes from badges branch
+        run: |
+          git pull origin badges --rebase || echo "Nothing to pull"
 
       - name: ⚙️ Generating coverage badges
         uses: jpb06/coverage-badges-action@latest
