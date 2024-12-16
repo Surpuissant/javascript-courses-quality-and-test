@@ -41,6 +41,7 @@ const scoreDom = document.getElementById('score');
 scoreDom.textContent = score;
 
 // Démarrage du décrément du score
+let scoreInterval = null;
 startScoreDecrement();
 
 // Événements
@@ -76,7 +77,6 @@ function resetForNewDay() {
     score = INITIAL_SCORE;
 }
 
-let scoreInterval = null;
 function startScoreDecrement() {
     scoreInterval = setInterval(() => {
         if (score > 0) {
