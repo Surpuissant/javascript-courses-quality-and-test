@@ -1,4 +1,10 @@
 ![Contributors](https://github.com/Surpuissant/javascript-courses-quality-and-test/actions/workflows/node.js.yml/badge.svg)
+![Branches](https://github.com/Surpuissant/javascript-courses-quality-and-test/raw/badges/badges/coverage-branches.svg)
+![Functions](https://github.com/Surpuissant/javascript-courses-quality-and-test/raw/badges/badges/coverage-functions.svg)
+![Lines](https://github.com/Surpuissant/javascript-courses-quality-and-test/raw/badges/badges/coverage-lines.svg)
+![Statements](https://github.com/Surpuissant/javascript-courses-quality-and-test/raw/badges/badges/coverage-statements.svg)
+![Coverage total](https://github.com/Surpuissant/javascript-courses-quality-and-test/raw/badges/badges/coverage-total.svg)
+
 
 # Hangman Game
 This is a small project to build a classic Hangman game in JavaScript.
